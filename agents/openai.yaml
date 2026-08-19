@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Paper Writing"
+  short_description: "Write and audit evidence-grounded research papers"
+  default_prompt: "Use $academic-paper-writing to improve this manuscript while preserving its verified evidence and intended venue."
