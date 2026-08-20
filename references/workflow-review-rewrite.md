@@ -6,9 +6,13 @@
 
 Check whether the paper's research question, gap, target/estimand, method, experiment, and conclusion refer to the same object. Identify claims unsupported by evidence or contradicted by completed work.
 
+For a doctoral dissertation, review two macro levels: the whole program's overarching question and cumulative contribution, then each chapter's subquestion, evidence, contribution, and role in the synthesis. A set of individually sound chapters can still fail to form a dissertation.
+
 ### Meso review
 
 Reverse-outline sections and paragraphs. Check unique section jobs, paragraph necessity, concept order, transitions, and cross-section duplication.
+
+For a dissertation, also reverse-outline chapters and test whether repeated background, methods, or limitations serve chapter intelligibility or merely duplicate text.
 
 ### Micro review
 
@@ -26,6 +30,8 @@ For each issue give:
 
 `location | diagnosis | why it matters | evidence | concrete repair`
 
+For a dissertation, label whether an issue is `whole-dissertation`, `cross-chapter`, `chapter-local`, `language`, or `institutional-compliance`; do not mix a scientific defect with a deposit-format defect.
+
 Do not equate length with a problem. Identify the duplicated or missing function.
 
 ## Rewrite structurally
@@ -37,6 +43,12 @@ Before editing, state internally what must remain unchanged:
 - citation meaning and provenance;
 - contribution boundaries and limitations;
 - target audience and venue constraints.
+
+When the user protects numbers, equations, citation keys, cross-references, terminology, or published text, create a preservation manifest:
+
+`element | source locator | exact-string or semantic preservation | allowed operation | verification`
+
+Do not assume that “unchanged” means only approximately equivalent. If the requested preservation level is unclear and changes the permitted rewrite, ask; otherwise use the stricter interpretation and report it. After editing, compare protected elements mechanically when feasible and inspect any unavoidable renumbering or citation-order change separately.
 
 Then:
 
@@ -59,9 +71,19 @@ For journal to conference, narrow the thesis and retain the minimum complete evi
 
 In either direction, re-check current policies on overlap, prior publication, anonymization, supplementary material, and citation of earlier versions.
 
+## Integrate papers into a Chinese doctoral dissertation
+
+Use [chinese-doctoral-dissertation.md](chinese-doctoral-dissertation.md) and the institution's current rules. Determine whether the allowed form is monograph, publication-based, or hybrid before editing included work.
+
+- Preserve the original evidence boundary and publication status of each study.
+- Verify which published text may be reproduced, translated, or rewritten, and record version, copyright, permission, attribution, and co-author contribution.
+- Build bridging and synthesis chapters that explain how the studies jointly answer an overarching question; do not use superficial terminology unification to conceal incompatible assumptions or results.
+- Distinguish the candidate's cumulative original contribution from the sum of co-authored paper contribution lists.
+- Audit the Chinese and English front matter with [chinese-academic-writing.md](chinese-academic-writing.md).
+
 ## Perform adversarial deletion tests
 
-- If deleting a paragraph loses nothing, remove or merge it.
+- If deleting a paragraph loses nothing, remove or merge it. In a dissertation, first test whether it is necessary for chapter-level intelligibility or an examination requirement.
 - If deleting a citation changes no support, ask whether it is decorative.
 - If deleting a method component leaves the claimed mechanism unchanged, reassess whether the component is core.
 - If deleting an experiment leaves a contribution unsupported, the experiment is central and belongs in the main evidence chain.
@@ -76,6 +98,7 @@ Never strengthen:
 - one setting into generality;
 - a non-significant result into equivalence;
 - a preliminary result into a completed contribution;
+- a chapter-level result into a dissertation-wide conclusion without an explicit synthesis;
 - a citation's abstract-level suggestion into a verified detailed finding.
 
 When evidence is incomplete, improve the structure around the gap and label it; do not improve the apparent certainty.

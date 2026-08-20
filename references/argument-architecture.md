@@ -8,6 +8,8 @@ Start from the paper's inferential chain:
 
 The chain is diagnostic. It does not prescribe eight paragraphs or eight sections. A short conference Introduction may combine context with the established paradigm and combine the solution with contributions. A broad journal Introduction may separate the same moves because different claims need different evidence. The deciding test is whether a prepared but non-specialist reader can reconstruct the argument without guessing.
 
+For a Chinese doctoral dissertation, the whole document is hierarchical rather than one enlarged version of this chain: an overarching question is decomposed into chapter-level questions and reunited through cross-chapter synthesis. Read [chinese-doctoral-dissertation.md](chinese-doctoral-dissertation.md).
+
 ## Use rhetorical moves adaptively
 
 For an Introduction, consider these moves:
@@ -50,6 +52,8 @@ Acceptable controlling openings include:
 - a theorem, proposition, algorithm step, or experimental question.
 
 Formal definitions and theorem statements need not be preceded by decorative topic sentences. A short transition paragraph can be valid when it performs a necessary structural bridge, but it should be merged if it merely repeats neighboring content.
+
+The controlling function is semantic, not an English sentence template. In Chinese prose, a concise setup or contrast may precede the explicit claim when it improves logic and remains locally recoverable; read [chinese-academic-writing.md](chinese-academic-writing.md).
 
 ## Test paragraph necessity and order
 

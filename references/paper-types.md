@@ -69,6 +69,37 @@ Center the chain:
 - Match claims to study design and reporting guidance.
 - Read [medical-ai.md](medical-ai.md).
 
+## Human-subject, qualitative, or mixed-methods study
+
+Choose the inferential chain from the research paradigm rather than forcing a model-comparison template.
+
+- For quantitative human-subject studies, make recruitment, assignment, unit of analysis, outcome construction, missingness, exclusion, uncertainty, and multiplicity visible.
+- For qualitative studies, center the research question, sampling rationale, data-generation context, analytic approach, researcher positionality where relevant, evidential excerpts or artifacts, rival interpretations, and transferability boundary.
+- For mixed methods, state why integration is necessary, where qualitative and quantitative strands meet, and what conclusion depends on both.
+- Distinguish usability, preference, behavior, performance, and downstream impact. One does not establish the others.
+- Verify current ethics, consent, compensation, privacy, and reporting requirements for the institution and venue.
+
+## Position, perspective, or conceptual paper
+
+Center the chain:
+
+`important unresolved issue -> explicit position or conceptual distinction -> strongest supporting and opposing evidence -> consequences -> falsifiable or actionable agenda`
+
+- Do not disguise an opinion as an empirical finding or a proposed definition as community consensus.
+- Steelman credible alternatives and state what evidence would change the position.
+- Make conceptual novelty and practical consequence explicit without inventing evaluation results.
+
+## Replication or negative-result paper
+
+Center the chain:
+
+`important prior claim -> faithful test boundary -> replication design -> uncertainty and deviations -> result -> update to the claim's scope`
+
+- Separate exact, close, and conceptual replication.
+- A non-significant result is not proof of no effect; report effect sizes, uncertainty, power or precision, and compatibility with the original claim.
+- Preserve protocol deviations, failed analyses, and evidence that changes the interpretation.
+- Judge value by what the result teaches about robustness, boundary conditions, or measurement—not by whether it is positive.
+
 ## Review or survey
 
 Center the chain:

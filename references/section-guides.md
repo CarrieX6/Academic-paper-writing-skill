@@ -1,6 +1,6 @@
 # Section Guides
 
-Section names and order may vary by venue and paper type. Preserve each section's intellectual job even when sections are merged.
+Section names and order may vary by venue, language, and paper type. Preserve each section's intellectual job even when sections are merged. This file describes research-paper units; for a Chinese doctoral dissertation, use [chinese-doctoral-dissertation.md](chinese-doctoral-dissertation.md) for whole-document and chapter roles, then apply this guide only to paper-like research chapters where appropriate.
 
 ## Title
 
