@@ -1,6 +1,16 @@
-# Medical-AI Writing
+# Medical and Biomedical AI Writing
 
-## Begin from the clinical information pathway
+## Classify the biomedical purpose before applying clinical rules
+
+First determine whether the work is:
+
+- **clinical or translational**: intended to inform screening, diagnosis, prognosis, treatment, monitoring, workflow, or care delivery;
+- **biomedical discovery**: intended to generate or test biological, molecular, pharmacological, imaging-science, or population-level knowledge without a current clinical deployment claim;
+- **infrastructure or resource work**: a dataset, foundation model, annotation system, software system, or benchmark intended to support later research.
+
+Do not force discovery or infrastructure work into a clinical workflow narrative. Conversely, do not use a discovery label to avoid intended-use, patient-safety, or governance questions when the manuscript makes a clinical claim. Apply the common data and evidence rules below, then the relevant purpose-specific route.
+
+## For clinical or translational work, begin from the information pathway
 
 Before introducing an ML abstraction, establish:
 
@@ -12,6 +22,17 @@ Before introducing an ML abstraction, establish:
 
 Define “privileged information,” “multimodal,” “missing,” “costly,” or “deployment unavailable” operationally for the cohort. Do not assume all medical datasets share the same privileged source.
 
+For clinical language or generative systems, additionally define the generated artifact, intended reader, source records available at generation and review, human oversight, factuality and omission criteria, abstention/escalation behavior, and whether evaluation measures clinical correctness or only linguistic similarity. Do not infer clinical utility from automated text metrics or an unblinded convenience rating.
+
+## For biomedical discovery, begin from the scientific inference
+
+Establish the biological question, experimental system or population, measurement technology, preprocessing and batch structure, target of inference, validation modality, and boundary between prediction and biological mechanism.
+
+- Distinguish hypothesis generation from confirmatory evidence and in-silico validation from wet-lab, animal, or human validation.
+- Make batch effects, site effects, repeated measures, data dependencies, multiplicity, and external biological validation visible when relevant.
+- Do not translate predictive association into pathway, target, causal, therapeutic, or clinical claims without the required evidence.
+- For drug or molecular discovery, state whether the endpoint is computational ranking, binding/activity evidence, preclinical validation, or clinical outcome; do not collapse these levels.
+
 ## Make cohort and data credibility visible
 
 - State the unit of analysis: patient, examination, image, lesion, study, visit, or institution.
@@ -20,6 +41,8 @@ Define “privileged information,” “multimodal,” “missing,” “costly,
 - Identify label provenance, reference standard, annotator expertise, adjudication, and timing.
 - Distinguish routine clinical variables from information unavailable at intended deployment.
 - Prevent leakage through reports, post-outcome notes, identifiers, preprocessing, augmentation, or related studies.
+
+For non-patient biomedical data, replace patient-level language with the correct independent unit—such as donor, specimen, animal, cell line, slide, molecule, site, batch, or experiment—and expose nested or repeated measurements.
 
 ## Match evaluation to the clinical claim
 
@@ -48,6 +71,8 @@ Verify current, study-type-appropriate requirements for:
 - funding, conflicts, medical-device or regulatory context, and intended-use statements.
 
 Do not hardcode a checklist version; inspect the current official source for the study type and venue.
+
+Select reporting guidance by study design and intended claim rather than by the presence of AI alone. Record which guidance applies, which items are not applicable, and where each required item is reported. A checklist does not repair a weak design.
 
 ## Avoid common overclaims
 

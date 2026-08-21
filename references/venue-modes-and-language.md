@@ -1,4 +1,6 @@
-# Venue Modes and Language
+# Conference/Journal Modes and English Language
+
+This reference governs conference/journal papers. For Chinese prose, also read [chinese-academic-writing.md](chinese-academic-writing.md); for Chinese doctoral dissertations, use the dissertation route rather than treating a degree as a venue.
 
 ## Separate independent axes
 
@@ -47,12 +49,13 @@ When the target venue is undecided:
 - mark venue-dependent choices for later resolution;
 - do not claim compliance with any venue.
 
-## Initial submission, revision, and camera-ready
+## Initial submission, revision, camera-ready, and production
 
 - **Initial submission:** enforce anonymity, page limits, permitted supplements, and contemporaneous-submission rules.
 - **Revision/rebuttal:** answer reviewer concerns without silently changing the scientific target; distinguish new evidence from clarification.
 - **Camera-ready:** remove required anonymization, integrate accepted changes, update metadata, and follow proceedings or publisher production instructions.
 - **Journal resubmission:** remove previous-venue artifacts and adapt the scientific presentation, not merely the formatting.
+- **Production proof:** correct publisher-introduced or author-detected production errors within the permitted scope; do not silently add new results or alter the accepted scientific claim.
 
 ## Choose English variety deliberately
 

@@ -55,6 +55,8 @@ Then confirm:
 
 Cross-check high-risk or conflicting metadata against an independent trusted index such as Crossref, PubMed, DBLP, or arXiv as appropriate. Metadata services verify identity; they do not replace reading the paper for scientific support.
 
+For Chinese-language sources, verify the original journal, publisher, standard body, institution, or official repository and preserve the authoritative Chinese metadata; read [chinese-academic-writing.md](chinese-academic-writing.md). Do not translate a title or romanise an author name and present the generated form as official metadata.
+
 If full verification is impossible, narrow the claim, mark the source unverified internally, or omit it. Never invent a plausible BibTeX entry.
 
 ## Establish literature coverage by saturation
@@ -71,6 +73,8 @@ Use these practical exit conditions:
 - search queries, sources, dates, inclusion logic, and unresolved access gaps are recorded internally.
 
 Saturation is claim-relative. A broad claim requires broader coverage than a narrowly bounded one. Never assert exhaustiveness without a method capable of supporting it.
+
+For a doctoral dissertation, assess saturation both for the overarching research program and for specialized chapter claims. A long standalone literature chapter does not excuse missing nearest work inside a later chapter, but repeated citations should serve a distinct local purpose rather than reproduce the same review.
 
 ## Write Related Work as synthesis
 
@@ -93,6 +97,7 @@ Use positive, bounded positioning such as “prior work optimizes transfer from 
 - Compile and inspect undefined citations, duplicate keys, capitalization loss, author truncation, and venue-name inconsistencies.
 - Do not cite a source that was never read sufficiently to verify its use.
 - Do not retain references solely to inflate breadth or imitate the citation density of accepted papers.
+- For included or adapted publications in a dissertation, distinguish citation of the scientific work from disclosure of text reuse, publication status, version, candidate contribution, and copyright permission.
 
 ## Red-team novelty and attribution
 
