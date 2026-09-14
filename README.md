@@ -10,7 +10,7 @@ The skill is designed for:
 - method, theory, empirical, benchmark/dataset, systems, clinical, human-subject, qualitative, mixed-methods, review, position, replication, and negative-result studies;
 - medical AI and major AI domains, including ML, CV, multimodal learning, NLP/LLMs, RL, ML systems, robotics, HCI, trustworthy AI, security, and scientific discovery;
 - evidence-preserving removal of formulaic AI-sounding prose and reconstruction around an author's documented academic voice;
-- persuasive narrative design that foregrounds the strongest defensible contribution without suppressing prespecified, unfavorable, safety-relevant, or claim-changing evidence.
+- persuasive narrative design that foregrounds the strongest defensible contribution, omits non-consequential exploratory dead ends, and retains required or claim-changing evidence.
 
 It does not treat a doctoral dissertation as a long journal article, Chinese prose as translated English, or a polished sentence as a substitute for scientific evidence. Humanization is not AI-detector evasion, disclosure avoidance, synonym spinning, or permission to alter the research record.
 
@@ -156,7 +156,7 @@ Separate current evidence from planned experiments and identify any claim that m
 作者声线：以我提供的三段已确认文本为风格样本，不复用其中的主张或句子
 保护项：所有数值、置信区间、方向、引用键、公式、数据划分、预设/探索性标签保持不变
 
-请先确定最强的证据支持型贡献，再把其他结果组织为解释、验证或适用边界。跨零区间、任务异质性和关键负结果必须保留，但不要写成失败日志或主动削弱论文的免责声明。最后单独执行证据完整性核对。
+请先确定最强的证据支持型贡献，再把其他结果组织为解释、验证或适用边界。只保留会改变主张、迁移边界或可靠性判断的跨零区间、任务异质性和关键负结果；与最终主张无关的探索性失败不必主动写入正文。最后单独执行主张完整性核对。
 ```
 
 Expected behavior: the skill loads the public medical-imaging methods adapter and the voice/narrative route, distinguishes narrative emphasis from record selection, and performs an integrity pass after author-voice reconstruction. An installation-specific private research profile is loaded only when it exists locally and the current artifact belongs to that configured portfolio.
@@ -171,8 +171,9 @@ The skill follows several non-negotiable principles:
 - recover author voice from approved patterns without copying phrases or imposing mechanical word and punctuation bans;
 - use current official venue or degree-institution requirements rather than remembered rules;
 - verify consequential citations and novelty boundaries from real sources;
-- preserve prespecified and claim-changing negative evidence, uncertainty, material limitations, and unresolved dependencies;
-- prohibit outcome-dependent metric, endpoint, baseline, subgroup, threshold, and comparison selection unless it is transparently labeled exploratory or post hoc;
+- preserve required prespecified evidence and findings that materially change the headline, uncertainty needed to interpret reported effects, material limitations, and unresolved dependencies;
+- omit non-consequential exploratory failures and nulls by default, and allow outcome-informed metrics, endpoints, baselines, subgroups, thresholds, or comparisons to support a transparently labeled exploratory narrative with relevant selection context;
+- never present an outcome-informed choice as prespecified or let it silently replace a required primary analysis or declared final evaluation;
 - never invent references, data, equations, proofs, experiments, results, templates, or institutional rules;
 - never optimize wording to evade AI detectors or required disclosure;
 - avoid fixed paragraph counts and one-size-fits-all Introduction structures;
@@ -211,4 +212,4 @@ academic-paper-writing/
 
 The author-voice and academic-humanization route adapts ideas from [AIScientists-Dev/academic-humanizer at revision `94b88b2`](https://github.com/AIScientists-Dev/academic-humanizer/commit/94b88b23703bed7df507acae7d6d5876209a0cdf). The non-defensive narrative route adapts ideas from [Adkid-Zephyr/anti-defensive-writing-Skill at revision `102c8b2`](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/commit/102c8b21acf5eda3a0aef3d9779a65db646c8980).
 
-Both routes were revised for evidence integrity: there are no fixed word or punctuation bans, and persuasive emphasis cannot hide prespecified outcomes, select favorable metrics after the fact, or erase material negative evidence. Full upstream notices and modification notes are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Both routes were revised to distinguish legitimate narrative curation from misleading outcome switching: non-consequential exploratory negatives may be omitted, and outcome-informed metrics may support a clearly labeled exploratory narrative with relevant selection context, while required primary evidence and claim-changing findings cannot be silently suppressed or retrospectively relabeled. Full upstream notices and modification notes are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

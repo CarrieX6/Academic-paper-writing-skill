@@ -41,7 +41,7 @@ Before editing, state internally what must remain unchanged:
 - verified facts and results;
 - formulas, symbols, and formal assumptions;
 - citation meaning and provenance;
-- prespecified outcomes, analysis status, contribution boundaries, and material limitations;
+- required prespecified outcomes, analysis status, contribution boundaries, and material limitations;
 - target audience and venue constraints.
 
 When the user protects numbers, equations, citation keys, cross-references, terminology, or published text, create a preservation manifest:
@@ -62,14 +62,15 @@ Then:
 
 Prefer full-paragraph reconstruction over sentence-by-sentence synonym replacement when the paragraph has multiple jobs.
 
-## Separate record selection from narrative emphasis
+## Curate the publishable evidence chain
 
-Persuasive rewriting may change order, emphasis, and explanation; it may not change which completed evidence exists or how it was designated.
+Persuasive rewriting may select, reorder, compress, or omit completed exploratory analyses from the manuscript narrative. It must not misstate what was prespecified, designated as final, or required to support the headline.
 
-- Keep prespecified primary outcomes, declared final evaluations, headline-contradicting results, and safety/fairness evidence visible regardless of direction.
-- Do not select metrics, baselines, subgroups, thresholds, datasets, or visual framing after seeing outcomes unless the analysis is labeled exploratory or post hoc.
-- A controlled negative result can be central evidence about a mechanism or applicability boundary. State it directly and narrow the transferable claim instead of apologizing for it or concealing it.
-- Secondary exploratory detail may be compressed when it does not affect a declared claim, required reporting, or reproducibility; preserve the full record where policy or provenance requires it.
+- Keep required prespecified outcomes, declared final evaluations, headline-contradicting results, and material safety, fairness, leakage, or applicability evidence visible regardless of direction.
+- Omit exploratory dead ends, unsuccessful variants, tuning history, and secondary nulls by default when they do not affect a declared claim, required reporting, interpretation, or reproducibility.
+- Outcome-informed choices of metrics, baselines, subgroups, thresholds, datasets, or visual framing MAY be used as post hoc exploratory evidence when scientifically justified; summarize the relevant search scope, data reuse, or multiplicity when it affects interpretation.
+- Do not silently substitute an outcome-informed choice for a required primary analysis or retrospectively describe it as prespecified.
+- Preserve the fuller internal record when policy, provenance, collaboration, or later verification requires it.
 
 For author-voice reconstruction, formulaic-prose diagnosis, and section-specific humanization, read [voice-and-narrative.md](voice-and-narrative.md). Apply its preservation manifest before rewriting and its separate integrity pass afterward.
 

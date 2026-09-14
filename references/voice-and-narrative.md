@@ -12,7 +12,7 @@
 
 Use this guide to make scholarly prose sound authored, specific, and persuasive while preserving the research record. Humanization is not detector evasion, synonym replacement, or removal of every hedge. Apply priorities in this order:
 
-1. research integrity, complete reporting, and binding policy;
+1. research integrity, applicable reporting requirements, and binding policy;
 2. verified claims, evidence, and protected document elements;
 3. a clear hierarchy centered on the strongest defensible contribution;
 4. venue, language, disciplinary convention, and author voice;
@@ -62,29 +62,29 @@ Lead with the strongest contribution supported by the complete record. Do not di
 
 The central contribution may be a mechanism distinction, a fair evaluation design, a bounded negative finding, a reusable estimator, an interface correction, a dataset/resource, or a clinical decision insight. It need not be a universally superior model.
 
-## Sharpen the story without selecting the record
+## Curate the narrative without falsifying the record
 
-Narrative emphasis is allowed; selective reporting is not.
+Selective presentation is normal: a paper is a curated scholarly argument, not an inventory of every run. The boundary is whether an omission or retrospective relabeling would make the declared claim materially misleading or violate an applicable reporting requirement.
 
-- Keep every prespecified primary outcome and declared test set visible, regardless of direction.
-- Keep a result that contradicts the headline, changes safety or fairness, exposes leakage, or materially narrows applicability.
-- Keep uncertainty and the comparison needed to interpret an effect.
-- Do not replace an unfavorable primary metric with a favorable secondary metric.
-- Do not choose a baseline, subgroup, threshold, dataset, or visualization after seeing results unless the analysis is clearly labeled exploratory or post hoc.
+- Lead with the strongest robust finding and the minimum evidence chain needed to support it.
+- By default, do not enumerate exploratory nulls, discarded variants, failed pilots, hyperparameter trials, or redundant analyses that do not affect a declared claim, its interpretation, or a reporting obligation.
+- Keep visible every result required by the protocol or venue, every declared primary or final evaluation needed to judge the headline, and every finding that changes safety, fairness, calibration, leakage risk, external validity, or material applicability.
+- A secondary null that does not change the claim may be compressed, moved to supplementary material, or omitted from the manuscript narrative.
+- An outcome-informed metric, subgroup, threshold, baseline, dataset, or visualization MAY be highlighted as post hoc exploratory when it has a scientific rationale. When it was selected from the same question or analysis family, summarize the relevant search scope and keep the declared primary or final analysis visible enough to interpret it; do not call the new analysis prespecified or confirmatory.
 - Do not turn representation, metric, or task selection into a retrospective claim of prior intent.
-- Do not crop axes, omit intervals, change precision asymmetrically, or visually hide a comparator.
-
-It is legitimate to reduce detail for a redundant exploratory dead end that neither tests a declared question nor affects interpretation, subject to venue and reporting requirements. Preserve it in the audit trail or supplement when completeness or reproducibility requires it.
+- Do not crop axes, omit material uncertainty, change precision asymmetrically, or visually suppress a comparator needed to interpret the reported claim.
+- Preserve omitted analyses in the internal record when provenance, reproducibility, collaboration, or policy requires it.
 
 ## Handle negative results as evidence
 
 Classify an unfavorable or null result before deciding placement:
 
-- **Central contradiction:** conflicts with the headline or primary hypothesis. Report prominently and revise the claim.
-- **Mechanism or applicability boundary:** shows where, when, or why the effect changes. Integrate it into the main story as a boundary finding.
-- **Required integrity evidence:** concerns leakage, external testing, calibration, safety, fairness, subgroup performance, robustness, or a prespecified endpoint. Keep it in the appropriate main or supplementary location; do not demote it because it is unfavorable.
-- **Secondary null:** does not overturn the central claim but informs scope. Report concisely with uncertainty.
-- **Exploratory dead end:** has no bearing on a declared claim and is not required for complete reporting. It may be omitted from the narrative, but not misrepresented as unperformed.
+- **Central contradiction:** conflicts with the headline or primary hypothesis. Report it and revise the claim.
+- **Material boundary or integrity evidence:** changes applicability, safety, fairness, calibration, leakage assessment, external validity, or a required endpoint. Keep it in the main text or required supplement.
+- **Useful secondary null:** does not overturn the central claim but adds interpretable scope information. Compress it or move it to supplementary material.
+- **Non-consequential exploratory result:** has no bearing on the final claim and is not required for reporting or reproducibility. Omit it from the manuscript narrative by default without claiming that it was never examined.
+
+Do not proactively catalogue unfavorable experiments merely for completeness. Include them when they prevent a misleading interpretation, explain a consequential design choice, satisfy a reporting obligation, or provide publishable boundary evidence.
 
 Use factual language such as “did not improve,” “was lower,” or “the interval included zero.” Avoid emotional labels such as “failed badly,” apology, or speculation offered merely to rescue the result. If the design does not identify a mechanism, write “is consistent with,” “may reflect,” or a clearly labeled hypothesis.
 
@@ -158,7 +158,7 @@ An em dash, passive construction, the verb “demonstrate,” a long sentence, o
 Use two separate passes:
 
 1. **Argument and voice pass:** repair hierarchy, paragraph functions, specificity, rhythm, transitions, and author voice.
-2. **Integrity pass:** compare claims, protected strings, citations, numbers, analysis labels, negative evidence, and limitations against the preservation manifest and source artifacts.
+2. **Integrity pass:** compare claims, protected strings, citations, numbers, analysis labels, required or claim-changing negative evidence, and material limitations against the preservation manifest and source artifacts.
 
 For file edits, run available compilation, reference, protected-string, and diff checks. Inspect generated PDF or rendered output when layout can change meaning. A clean compile is necessary but does not prove semantic preservation.
 

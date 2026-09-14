@@ -61,12 +61,13 @@ For non-patient biomedical data, replace patient-level language with the correct
 - Engineering thresholds must not be described as clinical minimal important differences without clinical justification.
 - External validation, prospective evaluation, silent deployment, impact analysis, and randomized trials support different claim levels.
 
-## Report the complete result without writing defensively
+## Report a claim-complete result without writing defensively
 
 - Put the strongest clinically and statistically supported contribution at the center; do not organize Results as a chronology of attempted models.
-- Preserve all prespecified endpoints and any finding that changes safety, fairness, calibration, generalization, or the headline claim.
+- A methods paper need not enumerate exploratory nulls, failed pilots, tuning history, or discarded variants that do not affect its final claims. Omit them from the main narrative by default; use supplementary material only when they add useful context or are needed for reproducibility. When a highlighted metric or subgroup was chosen from that search, summarize the selection scope and any reuse of model-selection or test data.
+- For a registered or protocol-governed study, report all outcomes required by that protocol and the applicable reporting standard. Across study types, preserve any finding that changes safety, fairness, calibration, leakage assessment, generalization, or the headline claim.
 - Present controlled negative or heterogeneous results as mechanism or applicability evidence when the design supports that interpretation. Report the comparison and uncertainty before the explanation.
-- Do not rescue an aggregate gain by hiding class-wise deterioration, or promote a subgroup after observing a favorable result without a clear exploratory or post-hoc label.
+- Do not rescue an aggregate gain by hiding material class-wise deterioration. An outcome-informed subgroup or metric may be highlighted when it is scientifically useful and clearly labeled post hoc exploratory.
 - Concentrate limitations on the claims they actually bound. Remove generic self-criticism, but keep cohort, reference-standard, leakage, uncertainty, deployment, and external-validity constraints that affect interpretation.
 
 ## Handle imbalance and missingness precisely

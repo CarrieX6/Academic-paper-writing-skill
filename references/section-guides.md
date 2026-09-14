@@ -91,13 +91,13 @@ Organize evaluation around explicit research questions or hypotheses. Then speci
 - compute/training budgets and implementation details;
 - ablations, sensitivity tests, subgroup/class analysis, and external validation as claim-relevant.
 
-Do not choose a baseline set only after seeing favorable outcomes. Distinguish model-selection, exploratory, and final evaluation data.
+Baseline selection may be refined during exploration, but the publishable comparison set must remain scientifically defensible. Do not omit a strong comparator merely because it is unfavorable, and label outcome-informed additions or removals when they materially affect interpretation. Distinguish model-selection, exploratory, and final evaluation data.
 
 ## Results
 
 - Lead each subsection or paragraph with the research question or answer.
 - Report observations with effect size and uncertainty before interpretation.
-- Include prespecified and claim-changing negative, unstable, or bounded findings. Use well-controlled heterogeneity to define mechanism or applicability boundaries rather than treating it as an apology.
+- Include every declared primary or final analysis, results required by the protocol or venue, and any negative, unstable, or bounded finding that materially changes the claim. The main text need not enumerate exploratory dead ends or secondary nulls that do not affect scope; omit, group, or move them to supplementary material. Use well-controlled heterogeneity to define mechanism or applicability boundaries rather than treating it as an apology.
 - Avoid repeating the full setup or implying a mechanism not tested.
 - In journals that separate Results and Discussion, keep extensive interpretation for Discussion.
 

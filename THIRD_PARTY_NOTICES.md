@@ -34,7 +34,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - Source: <https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/102c8b21acf5eda3a0aef3d9779a65db646c8980>
 - Audited revision: `102c8b21acf5eda3a0aef3d9779a65db646c8980`
 - Upstream license: MIT
-- Integration note: adapted guidance on contribution hierarchy, argument roles, non-chronological structure, and direct conclusions. Outcome-dependent metric selection, concealment of unfavorable evidence, and blanket deletion rules were replaced with explicit research-integrity constraints.
+- Integration note: adapted guidance on contribution hierarchy, argument roles, non-chronological structure, and direct conclusions. The merged skill permits omission of non-consequential exploratory negatives and clearly labeled outcome-informed analyses, while replacing blanket permission to conceal unfavorable evidence or retrospectively redefine a primary result with claim-relative integrity constraints.
 
 ```text
 MIT License

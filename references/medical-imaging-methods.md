@@ -30,7 +30,7 @@ When a method assigns different supervision sources to different parts of a trai
 - matched-target controls and baselines that change multiple factors;
 - training-only information and the interface actually available at deployment.
 
-The publishable object may be controlled source assignment and mechanism attribution rather than a new loss alone. Task-dependent, null, or cross-zero results remain part of the answer; use them to delimit when the additional source transfers when the design supports that interpretation.
+The publishable object may be controlled source assignment and mechanism attribution rather than a new loss alone. Task-dependent, null, or cross-zero findings that materially delimit transfer, reliability, or applicability remain part of the scientific answer. Results with no bearing on the final claim may be compressed, moved to supplementary material, or omitted from the manuscript narrative.
 
 ## Predicted auxiliary-input studies
 
@@ -106,7 +106,7 @@ For a controlled negative or heterogeneous finding:
 4. state which alternatives remain compatible;
 5. narrow the transferable claim to the supported settings.
 
-Do not write a failure diary, invent a rescue story, redefine the primary result after observing outcomes, or describe a task-specific effect as consistent superiority. Label outcome-informed analyses as exploratory or post hoc and retain the frozen record.
+Do not write a failure diary or invent a rescue story. An outcome-informed metric or analysis may be used as post hoc exploratory evidence when clearly labeled; summarize the selection scope and data reuse when they affect interpretation. Do not silently redefine a frozen primary result or turn a task-specific effect into a claim of consistent superiority. Retain the internal analysis record.
 
 ## Enforce leakage, privacy, and redistribution boundaries
 
