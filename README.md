@@ -1,5 +1,7 @@
 # Academic Paper Writing Skill
 
+**English** | [简体中文](README.zh-CN.md)
+
 `academic-paper-writing` is a Codex skill for planning, drafting, structurally reviewing, humanizing, and rewriting evidence-grounded academic manuscripts. It combines argument architecture, author-voice recovery, non-defensive scientific storytelling, and claim-evidence control in one routed skill.
 
 The skill is designed for:
@@ -190,6 +192,8 @@ English-language doctoral dissertations, master's theses, undergraduate theses, 
 
 ```text
 academic-paper-writing/
+├── README.md
+├── README.zh-CN.md
 ├── SKILL.md
 ├── THIRD_PARTY_NOTICES.md
 ├── agents/
