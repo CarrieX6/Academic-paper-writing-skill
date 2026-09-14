@@ -41,7 +41,7 @@ Before editing, state internally what must remain unchanged:
 - verified facts and results;
 - formulas, symbols, and formal assumptions;
 - citation meaning and provenance;
-- contribution boundaries and limitations;
+- prespecified outcomes, analysis status, contribution boundaries, and material limitations;
 - target audience and venue constraints.
 
 When the user protects numbers, equations, citation keys, cross-references, terminology, or published text, create a preservation manifest:
@@ -53,13 +53,25 @@ Do not assume that “unchanged” means only approximately equivalent. If the r
 Then:
 
 1. repair the argument map;
-2. reorder, split, merge, or delete paragraphs;
-3. rewrite controlling sentences and evidence flow;
-4. line-edit for precision and language consistency;
-5. re-run claim-evidence and citation checks;
-6. list unresolved issues rather than hiding them.
+2. identify the strongest defensible contribution and assign supporting evidence the roles of explanation, validation, boundary, implementation, or context;
+3. reorder, split, merge, or delete paragraphs;
+4. rewrite controlling sentences and evidence flow;
+5. line-edit for precision, author voice, and language consistency;
+6. re-run claim-evidence, citation, and protected-element checks;
+7. list unresolved issues rather than hiding them.
 
 Prefer full-paragraph reconstruction over sentence-by-sentence synonym replacement when the paragraph has multiple jobs.
+
+## Separate record selection from narrative emphasis
+
+Persuasive rewriting may change order, emphasis, and explanation; it may not change which completed evidence exists or how it was designated.
+
+- Keep prespecified primary outcomes, declared final evaluations, headline-contradicting results, and safety/fairness evidence visible regardless of direction.
+- Do not select metrics, baselines, subgroups, thresholds, datasets, or visual framing after seeing outcomes unless the analysis is labeled exploratory or post hoc.
+- A controlled negative result can be central evidence about a mechanism or applicability boundary. State it directly and narrow the transferable claim instead of apologizing for it or concealing it.
+- Secondary exploratory detail may be compressed when it does not affect a declared claim, required reporting, or reproducibility; preserve the full record where policy or provenance requires it.
+
+For author-voice reconstruction, formulaic-prose diagnosis, and section-specific humanization, read [voice-and-narrative.md](voice-and-narrative.md). Apply its preservation manifest before rewriting and its separate integrity pass afterward.
 
 ## Convert between conference and journal forms
 

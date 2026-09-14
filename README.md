@@ -1,6 +1,6 @@
 # Academic Paper Writing Skill
 
-`academic-paper-writing` is a Codex skill for planning, drafting, structurally reviewing, and rewriting evidence-grounded academic manuscripts. It uses a unified entry point and loads only the language, document, venue, and AI-domain guidance relevant to the current task.
+`academic-paper-writing` is a Codex skill for planning, drafting, structurally reviewing, humanizing, and rewriting evidence-grounded academic manuscripts. It combines argument architecture, author-voice recovery, non-defensive scientific storytelling, and claim-evidence control in one routed skill.
 
 The skill is designed for:
 
@@ -8,9 +8,11 @@ The skill is designed for:
 - Chinese- and English-language journal articles;
 - Chinese doctoral dissertations governed by Chinese degree-granting institutions;
 - method, theory, empirical, benchmark/dataset, systems, clinical, human-subject, qualitative, mixed-methods, review, position, replication, and negative-result studies;
-- medical AI and major AI domains, including ML, CV, multimodal learning, NLP/LLMs, RL, ML systems, robotics, HCI, trustworthy AI, security, and scientific discovery.
+- medical AI and major AI domains, including ML, CV, multimodal learning, NLP/LLMs, RL, ML systems, robotics, HCI, trustworthy AI, security, and scientific discovery;
+- evidence-preserving removal of formulaic AI-sounding prose and reconstruction around an author's documented academic voice;
+- persuasive narrative design that foregrounds the strongest defensible contribution without suppressing prespecified, unfavorable, safety-relevant, or claim-changing evidence.
 
-It does not treat a doctoral dissertation as a long journal article, Chinese prose as translated English, or a polished sentence as a substitute for scientific evidence.
+It does not treat a doctoral dissertation as a long journal article, Chinese prose as translated English, or a polished sentence as a substitute for scientific evidence. Humanization is not AI-detector evasion, disclosure avoidance, synonym spinning, or permission to alter the research record.
 
 ## Installation
 
@@ -39,7 +41,9 @@ The skill can infer many settings from the manuscript and repository, but result
 - files or sections in scope;
 - evidence status: completed, exploratory, running, planned, or disputed;
 - protected content such as numbers, equations, citation keys, terminology, or published text;
-- whether the task is review-only or authorizes file edits.
+- whether the task is review-only, surface humanization, paragraph reconstruction, or full narrative reconstruction;
+- two to five author-approved writing samples when close voice matching is desired;
+- whether the task authorizes file edits.
 
 Do not paste invented results as placeholders. Give the skill access to the manuscript, verified bibliography, experiment artifacts, theorem/proof files, official template, and institutional or venue instructions when those materials are relevant.
 
@@ -142,16 +146,35 @@ location | diagnosis | why it matters | evidence | concrete repair
 Separate current evidence from planned experiments and identify any claim that must be narrowed or removed.
 ```
 
+### 9. Humanize and sharpen a medical-AI methods paper
+
+```text
+请使用 $academic-paper-writing 重构并润色这篇英文医学影像论文，使论证更像作者本人、贡献更集中，但不要以规避 AI 检测为目标。
+
+研究对象：训练信息与部署接口不一致的医学影像方法研究
+改写权限：允许重排段落和贡献顺序，不改变实验记录
+作者声线：以我提供的三段已确认文本为风格样本，不复用其中的主张或句子
+保护项：所有数值、置信区间、方向、引用键、公式、数据划分、预设/探索性标签保持不变
+
+请先确定最强的证据支持型贡献，再把其他结果组织为解释、验证或适用边界。跨零区间、任务异质性和关键负结果必须保留，但不要写成失败日志或主动削弱论文的免责声明。最后单独执行证据完整性核对。
+```
+
+Expected behavior: the skill loads the public medical-imaging methods adapter and the voice/narrative route, distinguishes narrative emphasis from record selection, and performs an integrity pass after author-voice reconstruction. An installation-specific private research profile is loaded only when it exists locally and the current artifact belongs to that configured portfolio.
+
 ## Core behavior
 
 The skill follows several non-negotiable principles:
 
-- build the scientific argument before polishing sentences;
+- build the strongest honest scientific argument before polishing sentences;
 - distinguish document mode, language, research type, audience, evidence maturity, stage, and governing authority;
+- identify one central contribution and assign supporting analyses clear argumentative roles rather than narrating experiment chronology;
+- recover author voice from approved patterns without copying phrases or imposing mechanical word and punctuation bans;
 - use current official venue or degree-institution requirements rather than remembered rules;
 - verify consequential citations and novelty boundaries from real sources;
-- preserve negative evidence, uncertainty, limitations, and unresolved dependencies;
+- preserve prespecified and claim-changing negative evidence, uncertainty, material limitations, and unresolved dependencies;
+- prohibit outcome-dependent metric, endpoint, baseline, subgroup, threshold, and comparison selection unless it is transparently labeled exploratory or post hoc;
 - never invent references, data, equations, proofs, experiments, results, templates, or institutional rules;
+- never optimize wording to evade AI detectors or required disclosure;
 - avoid fixed paragraph counts and one-size-fits-all Introduction structures;
 - keep Chinese and English titles, abstracts, keywords, terms, symbols, and consequential facts semantically aligned;
 - load domain adapters progressively rather than applying every AI checklist to every paper.
@@ -167,16 +190,25 @@ English-language doctoral dissertations, master's theses, undergraduate theses, 
 ```text
 academic-paper-writing/
 ├── SKILL.md
+├── THIRD_PARTY_NOTICES.md
 ├── agents/
 │   └── openai.yaml
 └── references/
     ├── chinese-academic-writing.md
     ├── chinese-doctoral-dissertation.md
     ├── medical-ai.md
+    ├── medical-imaging-methods.md
+    ├── voice-and-narrative.md
     ├── ai-domain-adapters.md
     ├── ai/
     │   └── focused domain adapters
     └── document, section, literature, compliance, and workflow guides
 ```
 
-`SKILL.md` is the routing and integrity entry point. Files under `references/` are loaded only when their mode is relevant.
+`SKILL.md` is the routing and integrity entry point. Files under `references/` are loaded only when their mode is relevant. A local installation may add `references/local-research-profile.md`; it is intentionally ignored by Git so unpublished project identities, development status, internal locators, and other competitive research context are not published with the reusable skill.
+
+## Upstream integration and licenses
+
+The author-voice and academic-humanization route adapts ideas from [AIScientists-Dev/academic-humanizer at revision `94b88b2`](https://github.com/AIScientists-Dev/academic-humanizer/commit/94b88b23703bed7df507acae7d6d5876209a0cdf). The non-defensive narrative route adapts ideas from [Adkid-Zephyr/anti-defensive-writing-Skill at revision `102c8b2`](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/commit/102c8b21acf5eda3a0aef3d9779a65db646c8980).
+
+Both routes were revised for evidence integrity: there are no fixed word or punctuation bans, and persuasive emphasis cannot hide prespecified outcomes, select favorable metrics after the fact, or erase material negative evidence. Full upstream notices and modification notes are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

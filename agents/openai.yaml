@@ -1,4 +1,4 @@
 interface:
   display_name: "Academic Paper Writing"
-  short_description: "Write and audit papers and Chinese PhD dissertations"
-  default_prompt: "Use $academic-paper-writing to improve this research paper or Chinese doctoral dissertation while preserving verified evidence and official requirements."
+  short_description: "Write, humanize, and audit papers and Chinese dissertations"
+  default_prompt: "Use $academic-paper-writing to draft, humanize, or audit this paper or Chinese doctoral dissertation without changing verified evidence, required reporting, or official constraints."

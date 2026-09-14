@@ -1,11 +1,11 @@
 ---
 name: academic-paper-writing
-description: Plan, draft, structurally review, or rewrite Chinese- or English-language peer-reviewed research papers and Chinese doctoral dissertations with document-aware argument structure, official-format compliance, and traceable claim-evidence control. Use for conference and journal manuscripts across AI fields, including medical AI, and for monograph, publication-based, or hybrid Chinese doctoral dissertations when permitted by the degree institution. Do not use for citation retrieval alone, grammar-only proofreading, grants, non-doctoral theses, English-language dissertations, or general non-research prose.
+description: Plan, draft, structurally review, humanize, or rewrite Chinese- or English-language peer-reviewed research papers and Chinese doctoral dissertations with document-aware argument structure, author-voice preservation, persuasive non-defensive narrative, official-format compliance, and traceable claim-evidence control. Use for conference and journal manuscripts across AI fields, including medical AI; for removing formulaic AI-sounding academic prose without altering evidence; and for monograph, publication-based, or hybrid Chinese doctoral dissertations when permitted by the degree institution. Do not use to evade AI detectors or disclosure rules, or for citation retrieval alone, grammar-only proofreading, grants, non-doctoral theses, English-language dissertations, or general non-research prose.
 ---
 
 # Academic Paper Writing
 
-Build a defensible scholarly argument before polishing prose. First identify the document mode, language, research type, audience, evidence maturity, governing authority, and submission or degree stage. Do not treat a doctoral dissertation as a long journal article or Chinese academic prose as translated English.
+Build the strongest scholarly argument the evidence can honestly sustain, then express it in the author's own academic voice. First identify the document mode, language, research type, audience, evidence maturity, governing authority, and submission or degree stage. Do not treat a doctoral dissertation as a long journal article, Chinese academic prose as translated English, or a paper as a project diary or self-audit report.
 
 ## Interpret rule strength
 
@@ -36,6 +36,8 @@ Infer the following from the request, manuscript, repository, and official instr
 9. **Source of truth**: manuscript files, experiment artifacts, theorem/proof files, verified bibliography, protocols, decision/audit records, and dissertation contribution records.
 10. **Project constraints**: required paragraph openings, protected published chapters, anonymization, author permissions, or advisor/committee requirements.
 11. **Collaboration language**: keep explanations and audits distinct from the manuscript language unless the user requests otherwise.
+12. **Author voice**: approved writing samples, preferred first-person use, hedge strength, sentence rhythm, terminology, punctuation, and disciplinary register. Treat samples as a style corpus, never an evidence source.
+13. **Narrative freedom**: whether only surface humanization is allowed or whether sections, paragraphs, contribution order, and the paper-level storyline may be reconstructed.
 
 For a conference or journal task with a known target, inspect the current official author guide, template, submission policy, and generative-AI policy before finalizing target-dependent prose or formatting. For a Chinese doctoral dissertation, inspect the current official degree regulations, authorized template, examination/deposit rules, and institutional AI-use policy before claiming compliance. If the governing target is unknown or inaccessible, record it as unresolved and continue only with work that does not depend on that rule. Read [template-exemplar-compliance.md](references/template-exemplar-compliance.md).
 
@@ -51,9 +53,12 @@ Read only the references needed for the task, but read every selected file compl
 - For a paper section draft or audit, read [section-guides.md](references/section-guides.md); use the dissertation guide rather than treating these section names as a mandatory thesis structure.
 - For Introduction, Related Work, novelty, citations, or bibliography work, read [literature-and-citation-integrity.md](references/literature-and-citation-integrity.md).
 - For medical or biomedical AI, read [medical-ai.md](references/medical-ai.md).
+- For medical-imaging work whose scientific object is an information mismatch between training and deployment, controlled privileged supervision, predicted auxiliary inputs, leakage-safe score generation, or reliability-aware evidence acquisition, also read [medical-imaging-methods.md](references/medical-imaging-methods.md). Do not route here from an isolated keyword such as “distillation” or “cross-fitting.”
+- If `references/local-research-profile.md` exists and the current artifact belongs to that configured portfolio, read it completely after the public medical-imaging adapter. Treat it as private routing context, not as evidence, and never expose its internal identifiers or unpublished status details in public output.
 - For domain-specific evidence risks in other AI research, read [ai-domain-adapters.md](references/ai-domain-adapters.md) and select only the relevant domain subsection.
 - For outlining or first drafting, read [workflow-outline-draft.md](references/workflow-outline-draft.md).
 - For structural review, rewriting, shortening, or conversion, read [workflow-review-rewrite.md](references/workflow-review-rewrite.md).
+- For humanization, author-voice matching, abstract/Introduction/Conclusion sharpening, rebuttal language, removing formulaic AI prose, or avoiding defensive writing, read [voice-and-narrative.md](references/voice-and-narrative.md). Combine it with the review route whenever restructuring is allowed.
 
 ## Apply non-negotiable integrity constraints
 
@@ -62,12 +67,22 @@ Read only the references needed for the task, but read every selected file compl
 - Make every consequential claim traceable to a verified internal artifact or a source that supports it at the stated strength.
 - Verify novelty and originality claims with a current, structured literature search. Avoid “first,” “only,” “unprecedented,” “填补空白,” and equivalent priority language unless the search scope makes it defensible.
 - Distinguish observation, interpretation, mechanism, implication, clinical claim, and cumulative dissertation contribution.
-- Preserve material limitations, negative evidence, and disagreements among included studies. Fluent synthesis must not erase them.
+- Preserve prespecified outcomes, material limitations, negative or contrary evidence, and disagreements among included studies. Fluent or persuasive synthesis must not erase them.
+- Never choose endpoints, metrics, baselines, subgroups, thresholds, or comparison framing because the observed result is more favorable. Label outcome-informed analyses as exploratory or post hoc and retain the original analysis record.
 - Follow the current official venue or institution instructions. Never alter official style files, margins, fonts, spacing, or required structure to evade limits.
 - Follow current venue, institutional, and collaborator rules for AI-assisted writing, reference handling, confidentiality, authorship, and disclosure. Disclosure is not permission for a prohibited task.
 - For publication-based dissertation material, verify text-reuse, copyright, version, co-author contribution, and attribution rules before rewriting or reproducing published content.
 - Maintain one language and house style within each intended component; keep bilingual titles, abstracts, keywords, symbols, and core terms semantically aligned.
 - Use accepted papers and approved dissertations only as advisory style corpora, never as authority over official rules or as text to imitate.
+- Do not optimize text to bypass AI detectors or conceal prohibited assistance. Improve authorship, specificity, and argumentative quality, and leave required AI-use disclosure to the applicable policy and author confirmation.
+
+## Build a persuasive, non-defensive narrative
+
+- Identify the single strongest evidence-supported contribution and make it the organizing center. Supporting analyses should explain, validate, delimit, or operationalize that contribution instead of appearing as an equal-weight experiment log.
+- State what the study establishes before cataloguing what it does not. Remove generic self-disqualification, apology, and boilerplate limitation language; keep every boundary that changes validity, interpretation, reproducibility, fairness, or clinical meaning.
+- Report an unfavorable or null result directly when it is prespecified, contradicts the headline, affects safety or fairness, or changes the claim. Frame a well-controlled negative result as evidence about a mechanism or applicability boundary when that interpretation is supported—not as a failed attempt and not as a hidden result.
+- Narrative reconstruction may change order, emphasis, section boundaries, and the headline only within the verified record. It may not relabel a post hoc discovery as prespecified, substitute a favorable metric for the primary one, or suppress a required comparison.
+- Prefer precise scope over habitual hedging. Use confident declarative language for established facts, calibrated language for bounded evidence, and explicit hypothesis language for mechanisms not identified by the design.
 
 ## Build the internal maps before substantial prose
 
@@ -111,6 +126,7 @@ Treat these as rhetorical moves, not required paragraphs. A doctoral dissertatio
 - **Draft:** write and test controlling functions before adding definitions, evidence, citations, formulas, results, implications, and transitions.
 - **Review:** lead with the overall structural verdict; identify critical, major, and minor issues with exact evidence and actionable repairs.
 - **Rewrite:** preserve verified facts, symbols, citations, contribution boundaries, and protected text; reconstruct whole units before line editing.
+- **Humanize:** first lock claims and protected elements; recover the author's voice and narrative hierarchy; then remove formulaic prose, empty transitions, repetitive summaries, and mechanical symmetry without banning words or punctuation by rule.
 - **Venue conversion:** change argument density, validation depth, section division, reporting, and overlap disclosures, not just length and template.
 - **Dissertation integration:** preserve each study's evidence boundary while constructing an explicit cross-chapter synthesis; never concatenate paper abstracts and call the result a cumulative contribution.
 
@@ -118,7 +134,9 @@ When the user requests analysis or review only, do not edit files. When the user
 
 ## Run the final audit
 
-Before declaring completion, confirm:
+Apply only the checks relevant to the requested scope, document stage, and claims. Complete routine checks silently; report only a failure, unresolved dependency, or boundary that materially affects the current deliverable. A short passage edit does not require a full submission-readiness report.
+
+Before declaring completion, confirm as applicable:
 
 1. The document mode, language, research type, audience, and stage were identified correctly.
 2. The central question or claim, method/inquiry, evidence, contribution, and conclusion agree at the appropriate document level.
@@ -132,3 +150,6 @@ Before declaring completion, confirm:
 10. Open experiments, proofs, permissions, or chapter dependencies remain visible rather than being disguised as completed contributions.
 11. For a doctoral dissertation, the overarching question, chapter subquestions, individual contributions, and final synthesis form a defensible cumulative contribution without overstating the candidate's role.
 12. The final artifact compiles or renders correctly, and its references, cross-references, figures, metadata, anonymization, and required front/back matter have been inspected when feasible.
+13. The strongest defensible contribution is visible early and remains the document's organizing center; the text does not read like an experiment diary, generic template, or self-rejection letter.
+14. Prespecified outcomes, unfavorable findings, uncertainty, fairness/safety evidence, and material limitations remain complete and correctly labeled despite narrative sharpening.
+15. The prose matches the author's documented voice without copying source phrasing, mechanically banning stylistic features, or changing numbers, citation keys, equations, LaTeX structure, terminology, or claim strength.

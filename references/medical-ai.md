@@ -1,14 +1,23 @@
 # Medical and Biomedical AI Writing
 
+For medical-imaging methods whose scientific object is a training/deployment information mismatch, controlled privileged supervision, predicted auxiliary inputs, leakage-safe score generation, or reliability-aware evidence acquisition, also read [medical-imaging-methods.md](medical-imaging-methods.md). Treat that adapter as reasoning guidance, not as a source of project results.
+
 ## Classify the biomedical purpose before applying clinical rules
 
 First determine whether the work is:
 
 - **clinical or translational**: intended to inform screening, diagnosis, prognosis, treatment, monitoring, workflow, or care delivery;
+- **medical-AI methods or controlled empirical research**: intended to isolate a learning, representation, supervision, evaluation, or deployment-interface question on medical data without claiming a current care pathway or patient benefit;
 - **biomedical discovery**: intended to generate or test biological, molecular, pharmacological, imaging-science, or population-level knowledge without a current clinical deployment claim;
 - **infrastructure or resource work**: a dataset, foundation model, annotation system, software system, or benchmark intended to support later research.
 
-Do not force discovery or infrastructure work into a clinical workflow narrative. Conversely, do not use a discovery label to avoid intended-use, patient-safety, or governance questions when the manuscript makes a clinical claim. Apply the common data and evidence rules below, then the relevant purpose-specific route.
+Default a study to the methods/controlled-empirical route when its main contribution is a learning mechanism, fair comparison, estimator, or information-interface design and it does not make an actual intended-use, workflow, safety, or patient-benefit claim. Do not force methods, discovery, or infrastructure work into a clinical workflow narrative. Conversely, do not use one of those labels to avoid intended-use, patient-safety, or governance questions when the manuscript does make a clinical claim. Apply the common data and evidence rules below, then the relevant purpose-specific route.
+
+## For medical-AI methods, begin from the controlled learning question
+
+Define the information available during training, model selection, evaluation, and deployment; the factor intentionally changed by each comparison; the estimand and independent unit; and the evidence that attributes an effect to that factor. Separate representation choice, supervision source, hyperparameter selection, calibration, and leakage control rather than letting one baseline change several at once.
+
+Apply cohort, label, split, leakage, uncertainty, and governance rules in proportion to the data and claim. Do not require a care-workflow narrative, patient-benefit disclaimer, or clinical deployment checklist unless the manuscript advances that level of claim.
 
 ## For clinical or translational work, begin from the information pathway
 
@@ -51,6 +60,14 @@ For non-patient biomedical data, replace patient-level language with the correct
 - Class-wise or subgroup non-inferiority is a statistical property under a stated margin; it is not automatically clinical safety.
 - Engineering thresholds must not be described as clinical minimal important differences without clinical justification.
 - External validation, prospective evaluation, silent deployment, impact analysis, and randomized trials support different claim levels.
+
+## Report the complete result without writing defensively
+
+- Put the strongest clinically and statistically supported contribution at the center; do not organize Results as a chronology of attempted models.
+- Preserve all prespecified endpoints and any finding that changes safety, fairness, calibration, generalization, or the headline claim.
+- Present controlled negative or heterogeneous results as mechanism or applicability evidence when the design supports that interpretation. Report the comparison and uncertainty before the explanation.
+- Do not rescue an aggregate gain by hiding class-wise deterioration, or promote a subgroup after observing a favorable result without a clear exploratory or post-hoc label.
+- Concentrate limitations on the claims they actually bound. Remove generic self-criticism, but keep cohort, reference-standard, leakage, uncertainty, deployment, and external-validity constraints that affect interpretation.
 
 ## Handle imbalance and missingness precisely
 

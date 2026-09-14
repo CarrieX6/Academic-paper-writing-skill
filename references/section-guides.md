@@ -17,6 +17,7 @@ Use a compact sequence adapted to venue rules:
 
 - Include concrete results when frozen and permitted; do not invent placeholders as findings.
 - Make the population, task, or evaluation setting visible when it determines scope.
+- State the strongest defensible answer early. Do not spend abstract space on a generic limitation inventory, but retain any boundary needed to interpret the headline.
 - Avoid citations unless the venue or article type calls for them.
 - Freeze the Abstract late, after claims and results stabilize.
 - Follow structured-heading requirements for journals that impose them.
@@ -31,6 +32,7 @@ Lead the intended reader from the scientific context to the paper's contribution
 - Explain difficulty before method detail.
 - Reveal the method in plain language before acronyms and full formalism.
 - State only completed, evidence-supported contributions and results.
+- Make the contribution hierarchy explicit; do not give every experiment equal weight or narrate the project's chronology.
 - Keep detailed literature taxonomy in Related Work.
 
 There is no required Introduction paragraph count. Merge moves under tight conference budgets when clarity survives; expand background or motivation for a broad journal audience only when it adds necessary understanding or evidence.
@@ -95,7 +97,7 @@ Do not choose a baseline set only after seeing favorable outcomes. Distinguish m
 
 - Lead each subsection or paragraph with the research question or answer.
 - Report observations with effect size and uncertainty before interpretation.
-- Include negative, unstable, or bounded findings that alter the claim.
+- Include prespecified and claim-changing negative, unstable, or bounded findings. Use well-controlled heterogeneity to define mechanism or applicability boundaries rather than treating it as an apology.
 - Avoid repeating the full setup or implying a mechanism not tested.
 - In journals that separate Results and Discussion, keep extensive interpretation for Discussion.
 
@@ -114,13 +116,14 @@ Use a progression such as:
 
 - Name the specific threat, affected claim, likely direction or uncertainty, and resulting scope boundary.
 - Distinguish remediable future work from intrinsic limits.
-- Avoid generic disclaimers that could apply to any paper.
+- Avoid generic disclaimers, ritual self-criticism, and exhaustive lists of ideal studies that could apply to any paper.
 - Do not use a Limitations section to excuse an unsupported headline claim; narrow the claim first.
 
 ## Conclusion
 
 - Answer the research question using the evidence actually established.
 - State the bounded significance without introducing a new claim, citation-dependent argument, or result.
+- Reinforce the paper's one evidence-supported memory point rather than reopening the full limitation inventory.
 - Keep future work subordinate to the completed contribution.
 
 ## Figures, tables, and captions
