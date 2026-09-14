@@ -1,6 +1,11 @@
-# Academic Paper Writing Skill
+# 学术论文写作 Skill
 
-**English** | [简体中文](README.zh-CN.md)
+**简体中文（默认显示）**
+
+<details>
+<summary><strong>English version / 英文版（点击展开或收起）</strong></summary>
+
+# Academic Paper Writing Skill
 
 `academic-paper-writing` is a Codex skill for planning, drafting, structurally reviewing, humanizing, and rewriting evidence-grounded academic manuscripts. It combines argument architecture, author-voice recovery, non-defensive scientific storytelling, and claim-evidence control in one routed skill.
 
@@ -193,7 +198,6 @@ English-language doctoral dissertations, master's theses, undergraduate theses, 
 ```text
 academic-paper-writing/
 ├── README.md
-├── README.zh-CN.md
 ├── SKILL.md
 ├── THIRD_PARTY_NOTICES.md
 ├── agents/
@@ -217,3 +221,220 @@ academic-paper-writing/
 The author-voice and academic-humanization route adapts ideas from [AIScientists-Dev/academic-humanizer at revision `94b88b2`](https://github.com/AIScientists-Dev/academic-humanizer/commit/94b88b23703bed7df507acae7d6d5876209a0cdf). The non-defensive narrative route adapts ideas from [Adkid-Zephyr/anti-defensive-writing-Skill at revision `102c8b2`](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/commit/102c8b21acf5eda3a0aef3d9779a65db646c8980).
 
 Both routes were revised to distinguish legitimate narrative curation from misleading outcome switching: non-consequential exploratory negatives may be omitted, and outcome-informed metrics may support a clearly labeled exploratory narrative with relevant selection context, while required primary evidence and claim-changing findings cannot be silently suppressed or retrospectively relabeled. Full upstream notices and modification notes are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+</details>
+
+`academic-paper-writing` 是一个 Codex Skill，用于规划、起草、结构化审查、去除程式化 AI 腔、恢复作者声线，以及重写以证据为基础的学术稿件。它把论证架构、作者声线恢复、非防御性的科学叙事和主张—证据控制整合在一个按需路由的 Skill 中。
+
+本 Skill 适用于：
+
+- 中英文会议论文；
+- 中英文期刊论文；
+- 受中国学位授予单位规范约束的中文博士学位论文；
+- 方法研究、理论研究、实证研究、基准/数据集研究、系统研究、临床研究、涉及人类参与者的研究、质性研究、混合方法研究、综述、立场论文、复现研究和负结果研究；
+- 医学 AI 及主要 AI 领域，包括 ML、CV、多模态学习、NLP/LLMs、RL、ML 系统、机器人、HCI、可信 AI、安全和科学发现；
+- 在不改变证据的前提下去除公式化的 AI 腔，并围绕作者已有的学术声线重构文本；
+- 设计有说服力的叙事：突出证据足以支撑的最强贡献，省略不影响结论的探索性弯路，同时保留规定必须呈现或会改变主张的证据。
+
+本 Skill 不会把博士学位论文视为加长版期刊论文，不会把中文写作处理成英文直译，也不会用句子润色替代科学证据。去除 AI 腔并恢复作者声线，不等于规避 AI 检测、逃避披露要求或机械替换同义词，也不意味着可以改动研究记录。
+
+## 安装
+
+使用本 Skill 预期的目录名，将仓库克隆到 Codex 的 skills 目录：
+
+```bash
+git clone https://github.com/CarrieX6/Academic-paper-writing-skill.git ~/.codex/skills/academic-paper-writing
+```
+
+更新已有安装：
+
+```bash
+git -C ~/.codex/skills/academic-paper-writing pull --ff-only
+```
+
+必需的入口文件是 `SKILL.md`。自动发现 Skill 的功能会保持启用；你也可以通过 `$academic-paper-writing` 显式调用它。
+
+## 需要提供什么
+
+本 Skill 可以从稿件和仓库中推断许多设置，但如果请求中明确以下信息，结果会更可靠：
+
+- 文档模式：会议论文、期刊论文或中文博士学位论文；
+- 目标会议/期刊或学位授予单位，以及当前所处阶段；
+- 稿件语言；若为英文，还应说明所需的英语变体；
+- 研究类型和目标读者；
+- 本次处理涉及的文件或章节；
+- 证据状态：已完成、探索性、进行中、计划中或存在争议；
+- 需要保护的内容，如数字、公式、引用键、术语或已发表文本；
+- 任务类型：仅审查、表层去 AI 腔与声线调整、段落重构或完整叙事重构；
+- 如需高度贴近作者声线，请提供两到五段经作者确认的写作样本；
+- 本次任务是否允许修改文件。
+
+不要用虚构结果充当占位符。若与任务相关，请让本 Skill 能够访问稿件、已核实的参考文献库、实验产物、定理/证明文件、官方模板，以及所在机构或目标会议/期刊的要求。
+
+## 使用示例
+
+### 1. 审查英文会议论文的引言
+
+```text
+请使用 $academic-paper-writing 审查并重构我的英文 ICLR 方法论文中的 Introduction 和 Related Work。
+
+目标：ICLR 2027 初次投稿
+语言：美式英语
+受众：通用机器学习审稿人
+证据状态：方法已经冻结，但主要实验仍在进行
+约束：不得虚构结果，也不得声称计划中的实验已经完成
+文件：manuscript/sections/01_introduction.tex 和 02_related_work.tex
+
+请先给出宏观/中观/微观结构审查和段落功能图，然后只重写有证据支持的段落，并单独列出尚未解决的主张。
+```
+
+预期行为：本 Skill 会启用会议论文、方法论文、论证、文献和审查路由；不会把进行中的结果写入可直接投稿的主张，并会先核查目标会议当前的官方规则，再声称稿件符合要求。
+
+### 2. 重写中文期刊论文的方法与实验章节
+
+```text
+请使用 $academic-paper-writing 重构这篇中文人工智能期刊论文的方法和实验章节。
+
+目标：中文核心期刊，正式投稿模板稍后提供
+语言：简体中文正文，英文摘要
+范围：第3章方法、第4章实验
+保护项：所有数字、公式、公式编号、引用键和图表数据必须保持不变
+任务：允许调整小节顺序、拆分或合并段落，但不能补造实验设置或结果
+
+请先建立主张—证据表和受保护元素清单，再修改正文；最后检查中英文术语和摘要主张是否需要同步。
+```
+
+预期行为：本 Skill 会采用自然的中文信息结构，而不是照搬英文句法；把未知的期刊规则记录为待解决事项，并在修改后核验所有受保护元素。
+
+### 3. 将英文会议论文扩展为期刊论文
+
+```text
+请使用 $academic-paper-writing 规划如何将这篇英文会议论文扩展为期刊投稿。
+
+不要只扩写文字。请识别期刊版本需要增加哪些新的科学价值、哪些证据必须留在正文、哪些内容适合放入补充材料，以及应如何披露与既有会议论文的重合。在提出期刊论文大纲前，先给出主张—证据缺口分析。
+```
+
+预期行为：会议论文转期刊论文会被视为需要更广或更深证据的科学扩展，而不是单纯增加篇幅。
+
+### 4. 审查医学 AI 稿件
+
+```text
+请使用 $academic-paper-writing 从医学AI与机器学习审稿人的双重视角审查这篇英文医学影像论文。
+
+重点检查：intended use、患者级数据划分、标签和参考标准、信息泄漏、类别不平衡、校准、外部验证、临床主张边界，以及模型比较是否公平。只做审查，不修改文件。
+```
+
+预期行为：本 Skill 会先区分临床/转化研究、生物医学发现研究和基础设施研究，再应用相应的医学与技术证据规则。回顾性预测性能的提升不会被悄然拔高为临床效用或安全性。
+
+### 5. 建立中文博士学位论文的主线
+
+```text
+请使用 $academic-paper-writing 复盘并重构我的中文医学AI博士毕业论文主线。
+
+学校与阶段：某大学博士学位论文，准备盲审；学校细则和模板见 docs/degree_rules/
+论文形态：待根据学校规定确认
+研究内容：三个研究章节，其中两章来自已发表论文，一章为未发表研究
+目标：建立“总体问题—子问题—章节贡献—证据—跨章综合—博士层面贡献”的完整链路
+约束：不能把共同作者的贡献写成本人贡献，不能把未发表研究写成已经完成
+
+请先输出博士论文级论证图、两级主张—证据台账和本人贡献矩阵，再判断哪些章节需要重写。
+```
+
+预期行为：本 Skill 会启用中文博士学位论文模式，核查所在学校当前有效的规定，区分科学论证闭环与制度合规，也不会把多篇论文的摘要简单拼接成博士论文贡献。
+
+### 6. 将已发表论文整合进中文博士学位论文
+
+```text
+请使用 $academic-paper-writing 将三篇已发表论文规划为中文博士论文中的研究章节。
+
+在改写前，逐章检查：学校是否允许收录、可使用的论文版本、版权与公开仓储限制、共同作者同意、本人贡献、文本复用和重复证据。对于尚未核实的权限，只列为待解决（unresolved），不要直接复制或翻译已发表正文。
+```
+
+预期行为：本 Skill 会分别审查科学贡献归属、文本复用、版权许可和博士生本人贡献。
+
+### 7. 审查 LLM 或多模态论文
+
+```text
+请使用 $academic-paper-writing 按照顶级 AI 会议的标准审查这篇多模态 LLM 论文。重点检查训练阶段与部署阶段的信息可访问性、数据集污染、提示词与解码配置、测试时计算预算、自动评审器的效度、人工评估、模态缺失、资源条件匹配的基线，以及缺乏支持的推理或泛化主张。
+```
+
+预期行为：本 Skill 只会加载通用 AI、视觉/多模态和 NLP/LLM 适配器；默认不会加载无关的 RL、机器人或 HCI 指南。
+
+### 8. 请求审稿人式审查，但不修改文件
+
+```text
+请使用 $academic-paper-writing 评估这篇稿件的核心主张是否得到支持。不要修改文件。先给出总体结论，再按关键、主要和次要问题分组，并使用以下格式：
+
+位置 | 问题诊断 | 重要性 | 证据 | 具体修复方案
+
+请区分现有证据与计划中的实验，并指出所有必须收窄或删除的主张。
+```
+
+### 9. 恢复作者声线并强化医学 AI 方法论文
+
+```text
+请使用 $academic-paper-writing 重构并润色这篇英文医学影像论文，使论证更像作者本人、贡献更集中，但不要以规避 AI 检测为目标。
+
+研究对象：训练信息与部署接口不一致的医学影像方法研究
+改写权限：允许重排段落和贡献顺序，不改变实验记录
+作者声线：以我提供的三段已确认文本为风格样本，不复用其中的主张或句子
+保护项：所有数值、置信区间、方向、引用键、公式、数据划分、预先设定/探索性标签保持不变
+
+请先确定最强的证据支持型贡献，再把其他结果组织为解释、验证或适用边界。只保留会改变主张、迁移边界或可靠性判断的跨零区间、任务异质性和关键负结果；与最终主张无关的探索性失败不必主动写入正文。最后单独执行主张完整性核对。
+```
+
+预期行为：本 Skill 会加载公开的医学影像方法适配器及声线/叙事路由，区分叙事侧重与研究记录取舍，并在恢复作者声线后执行完整性复核。只有当本地存在某个安装实例专用的私有研究配置，且当前文稿属于该配置的研究项目组合时，才会加载该配置。
+
+## 核心行为
+
+本 Skill 遵循以下不可妥协的原则：
+
+- 先构建最强且诚实的科学论证，再润色句子；
+- 区分文档模式、语言、研究类型、目标读者、证据成熟度、所处阶段和适用规范的制定主体；
+- 确定一个核心贡献，并为支撑性分析赋予明确的论证角色，而不是按实验时间顺序流水记叙；
+- 从经确认的写作模式中恢复作者声线，但不复制原句，也不施加机械的用词或标点禁令；
+- 采用会议/期刊或学位授予单位当前有效的官方要求，而不是凭记忆套用规则；
+- 根据真实来源核验关键引用和创新性边界；
+- 保留按要求预先设定的证据、会实质改变核心结论的发现、解释已报告效应所必需的不确定性、重要局限，以及尚未解决的依赖条件；
+- 默认省略与最终主张无实质关系的探索性失败和零结果；如果指标、终点、基线、亚组、阈值或比较的选择受到已观察结果影响，仍可用它们支持明确标记为探索性的叙事，同时交代与这种选择有关的必要背景；
+- 绝不把受已观察结果影响而作出的选择描述为预先设定，也不允许它悄然替代强制要求的主要分析或已声明的最终评估；
+- 绝不虚构参考文献、数据、公式、证明、实验、结果、模板或机构规则；
+- 绝不为规避 AI 检测或绕过强制披露要求而优化措辞；
+- 不采用固定段落数量，也不套用千篇一律的引言结构；
+- 保持中英文标题、摘要、关键词、术语、符号和关键事实在语义上一致；
+- 按需逐步加载领域适配器，而不是把所有 AI 检查清单套到每篇论文上。
+
+## 支持范围
+
+当前的核心支持范围有意限定为：中英文同行评议会议论文和期刊论文，以及受中国学位授予单位规范约束的中文博士学位论文。
+
+英文博士学位论文、硕士学位论文、本科毕业论文、基金申请、仅做引文检索和仅限语法的校对，不属于主要工作流。本 Skill 也不能替代合格的统计学家、数学证明审阅专家、临床医生、领域科学家、安全评估人员、质性方法专家、伦理委员会、编辑或博士学位评审委员会。
+
+## 仓库结构
+
+```text
+academic-paper-writing/
+├── README.md
+├── SKILL.md
+├── THIRD_PARTY_NOTICES.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── chinese-academic-writing.md
+    ├── chinese-doctoral-dissertation.md
+    ├── medical-ai.md
+    ├── medical-imaging-methods.md
+    ├── voice-and-narrative.md
+    ├── ai-domain-adapters.md
+    ├── ai/
+    │   └── 聚焦具体领域的适配器
+    └── 文档、章节、文献、合规和工作流指南
+```
+
+`SKILL.md` 是路由与完整性控制的入口。只有与当前模式相关时，才会加载 `references/` 下的文件。本地安装实例可以添加 `references/local-research-profile.md`；Git 会有意忽略该文件，因此未公开的项目身份、研发状态、内部定位信息和其他具有竞争敏感性的研究背景不会随这个可复用 Skill 一同发布。
+
+## 上游整合与许可证
+
+作者声线恢复与学术文本去 AI 腔路由借鉴并改编自 [AIScientists-Dev/academic-humanizer 的 `94b88b2` 版本](https://github.com/AIScientists-Dev/academic-humanizer/commit/94b88b23703bed7df507acae7d6d5876209a0cdf)。非防御性叙事路由借鉴并改编自 [Adkid-Zephyr/anti-defensive-writing-Skill 的 `102c8b2` 版本](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/commit/102c8b21acf5eda3a0aef3d9779a65db646c8980)。
+
+两个路由都经过修订，以区分正当的叙事取舍与误导性的事后切换结局或评价指标（outcome switching）：可以省略不影响结论的探索性负结果；受已观察结果影响而选择的指标也可以支撑清楚标记为探索性的叙事，但必须交代与选择有关的必要背景。强制要求的主要证据和会改变主张的发现，则不能被悄然隐去或事后改换标签。完整的上游声明和修改说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
